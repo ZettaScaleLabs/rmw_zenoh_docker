@@ -18,7 +18,7 @@ RUN curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/ca
 
 RUN mkdir ~/ws_rmw_zenoh/src -p \
     && cd ~/ws_rmw_zenoh/src \
-    && git clone ${RMW_ZENOH_REPO} --branch ${RMW_ZENOH_BRANCH}} \
+    && git clone ${RMW_ZENOH_REPO} --branch ${RMW_ZENOH_BRANCH} \
     && cd ~/ws_rmw_zenoh \
     && rosdep update \
     && rosdep install --from-paths src --ignore-src --rosdistro rolling -y \
